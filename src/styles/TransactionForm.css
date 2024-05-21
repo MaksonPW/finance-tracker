@@ -1,0 +1,43 @@
+.TransactionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.TransactionForm__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.TransactionForm__input,
+.TransactionForm__select {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 48%; /* Ширина полей в строке */
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.TransactionForm button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 48%; /* Ширина кнопки */
+  box-sizing: border-box;
+}
+
+.TransactionForm button:hover {
+  background-color: #45a049;
+}

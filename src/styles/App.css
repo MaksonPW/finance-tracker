@@ -1,0 +1,67 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.App__left, .App__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.App__left {
+  margin-right: 20px;
+}
+
+.App__right {
+  margin-left: 20px;
+}
+
+.TransactionForm {
+  flex: 1;
+}
+
+.Dashboard {
+  flex: 1;
+}
+
+.Dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Dashboard__stat {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.Dashboard__progress {
+  width: 100%;
+}
+
+.progress-bar {
+  display: flex;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar__income {
+  background-color: #4caf50;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+}
+
+.progress-bar__expense {
+  background-color: #f44336;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+}

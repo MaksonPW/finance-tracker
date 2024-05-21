@@ -1,0 +1,65 @@
+.Dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Dashboard__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+  }
+  
+  .Dashboard__stat {
+    margin: 5px;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(50% - 10px);
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .Dashboard__stat h3 {
+    margin: 0;
+    font-size: 1rem; /* Уменьшаем размер шрифта заголовка */
+  }
+  
+  .Dashboard__stat p {
+    margin: 5px 0 0 0; /* Добавляем отступ сверху */
+    font-size: 0.8rem; /* Уменьшаем размер шрифта для суммы */
+  }
+  
+  .Dashboard__progress {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .progress-bar {
+    display: flex;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar__income {
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+  }
+  
+  .progress-bar__expense {
+    background-color: #f44336;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+  }

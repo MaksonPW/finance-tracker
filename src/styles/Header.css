@@ -1,0 +1,31 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .Header__navigation {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .Header__navigation nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .Header__navigation a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .Header__navigation a:hover {
+    text-decoration: underline;
+  }
+  
+  .Header__balance {
+    margin-left: auto;
+  }
