@@ -1,20 +1,48 @@
-.Dashboard {
+.Home {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.Home__left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 60%;
+}
+
+.Home__right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: flex-end;
+}
+
+.TransactionForm {
+  margin-bottom: 20px;
+}
+
+.TransactionList {
+  flex: 1;
+}
+
+.Dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .Dashboard__row {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin-bottom: 10px;
 }
 
 .Dashboard__stat {
   margin: 5px;
-  padding: 10px 5px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   width: calc(50% - 10px);
@@ -29,17 +57,20 @@
 
 .Dashboard__stat h3 {
   margin: 0;
-  font-size: 1rem; /* Уменьшаем размер шрифта заголовка */
+  font-size: 1rem;
 }
 
 .Dashboard__stat p {
-  margin: 5px 0 0 0; /* Добавляем отступ сверху */
-  font-size: 0.8rem; /* Уменьшаем размер шрифта для суммы */
+  margin: 5px 0 0 0;
+  font-size: 0.8rem;
 }
 
 .Dashboard__progress {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .progress-bar {
@@ -48,6 +79,7 @@
   background-color: #e0e0e0;
   border-radius: 4px;
   overflow: hidden;
+  width: 100%;
 }
 
 .progress-bar__income {

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import FinanceContext from '../context/FinanceContext';
+import { FinanceContext } from '../context/FinanceContext';
 import '../styles/TransactionForm.css';
 
 const TransactionForm = () => {

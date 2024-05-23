@@ -1,42 +1,20 @@
-.Register {
-  max-width: 400px;
-  margin: 0 auto;
+.Reports {
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f9f9f9;
 }
 
-.Register h2 {
-  text-align: center;
+.Reports__filters {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.Register form {
+.Reports__filters label {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
 }
 
-.Register label {
-  margin-bottom: 10px;
-}
-
-.Register input {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.Register button {
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.Register button:hover {
-  background-color: #45a049;
+.Reports__chart {
+  margin: 20px 0;
+  height: 400px;
 }

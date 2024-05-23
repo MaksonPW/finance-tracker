@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import FinanceContext from '../context/FinanceContext';
+import { FinanceContext } from '../context/FinanceContext';
 import '../styles/Dashboard.css';
 
 const Dashboard = () => {

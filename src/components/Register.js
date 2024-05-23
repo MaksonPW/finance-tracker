@@ -1,40 +1,55 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import AuthContext from '../context/AuthContext';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
 
 const Register = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
-  const { register } = useContext(AuthContext);
 
-  const handleRegister = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const success = await register(email, password);
-    if (success) {
-      navigate('/login');
+    if (!name || !email || !password) {
+      setError('Пожалуйста, заполните все поля.');
     } else {
-      alert('Ошибка регистрации');
+      setError('');
+      setSuccess(true);
+      setTimeout(() => {
+        navigate('/auth');
+      }, 1000);
     }
   };
 
   return (
-    <div className="Register">
-      <h2>Регистрация</h2>
-      <form onSubmit={handleRegister}>
-        <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </label>
-        <label>
-          Пароль:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </label>
-        <button type="submit">Зарегистрироваться</button>
-      </form>
+    <div className="AuthContainer">
+      <div className="AuthBox">
+        <h2>Регистрация</h2>
+        {error && <p className="error">{error}</p>}
+        {success && <p className="success">Вы успешно зарегистрировались!</p>}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Имя</label>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div className="form-group">
+            <label>Электронная почта</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className="form-group">
+            <label>Пароль</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+          <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>
+          Уже есть аккаунт? <Link to="/auth">Войти</Link>
+        </p>
+      </div>
     </div>
   );
-};
+}
 
 export default Register;

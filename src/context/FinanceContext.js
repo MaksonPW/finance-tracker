@@ -45,7 +45,7 @@ const financeReducer = (state, action) => {
   }
 };
 
-export const FinanceProvider = ({ children }) => {
+const FinanceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(financeReducer, initialState);
 
   return (
@@ -55,4 +55,4 @@ export const FinanceProvider = ({ children }) => {
   );
 };
 
-export default FinanceContext;
+export { FinanceContext, FinanceProvider };

@@ -4,7 +4,7 @@ import '../styles/Goals.css';
 const Goals = () => {
   return (
     <div className="Goals">
-      <h2>Goals</h2>
+      <h2>Цели</h2>
       {/* Добавьте форму для целей и список текущих целей здесь */}
     </div>
   );

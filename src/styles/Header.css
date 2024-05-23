@@ -1,31 +1,34 @@
 .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .Header__navigation {
-    display: flex;
-    flex-grow: 1;
-  }
-  
-  .Header__navigation nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .Header__navigation a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .Header__navigation a:hover {
-    text-decoration: underline;
-  }
-  
-  .Header__balance {
-    margin-left: auto;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.Header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Header__navigation nav {
+  display: flex;
+  gap: 20px;
+}
+
+.Header__navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.Header__navigation .active-link {
+  color: rgb(65, 154, 244); /* Голубой цвет для активной ссылки */
+}
+
+.Header__balance {
+  font-size: 1.2rem;
+  margin-left: auto; /* добавляем автоматическое выравнивание по правому краю */
+}

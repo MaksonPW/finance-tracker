@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import FinanceContext from '../context/FinanceContext';
+import { FinanceContext } from '../context/FinanceContext';
 import '../styles/TransactionList.css';
 
 const TransactionList = () => {
